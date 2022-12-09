@@ -20,7 +20,7 @@ model <- readRDS("light-model.RDS")
 #* @param last_pymnt_amnt Numeric: 119.66
 #* @param last_credit_pull_d Date: "Sep-2013"
 #* @param total_pymnt_inv Numeric 1008.91
-#* @post /predict
+#* @get /predict
 function(out_prncp,last_pymnt_amnt,
          last_credit_pull_d,total_pymnt_inv){
   df <- 
@@ -37,7 +37,7 @@ function(out_prncp,last_pymnt_amnt,
 #* @apiTitle Check the API
 #* @apiDescription This is a sanity check
 #* Echo back the input
-#* @post /check
+#* @get /check
 function(){
 print(paste0("Now is: ",Sys.time()))
 }
